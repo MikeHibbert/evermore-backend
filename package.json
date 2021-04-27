@@ -1,0 +1,39 @@
+{
+  "name": "evermore-backend",
+  "version": "1.0.0",
+  "description": "Backend services for Evermore webclient",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikeHibbert/evermore-backend.git"
+  },
+  "author": "Mike Hibbert",
+  "license": "GPLv3.0",
+  "bugs": {
+    "url": "https://github.com/MikeHibbert/evermore-backend/issues"
+  },
+  "scripts": {
+    "start": "if [[ $NODE_ENV == 'production' ]]; then node ./bin/www; else nodemon ./bin/www; fi"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcrypt": "^3.0.3",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.0",
+    "express-session": "^1.15.6",
+    "http-errors": "^1.8.0",
+    "lodash": "^4.17.11",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "pg": "^7.7.1",
+    "pug": "^2.0.4",
+    "sequelize": "^4.42.0",
+    "validator": "^10.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
