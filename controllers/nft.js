@@ -84,7 +84,7 @@ exports.detail = async function(req, res, next) {
             }
         }
 
-        const detail_url = `https://www.evermoredata.store/nft-detail/${node.id}`;
+        const detail_url = `https://www.evermoredata.store/ntfs/nft-detail/${node.id}`;
 
         let image_url = "https://arweave.net/c1mNDCo3Mh1PdimUr5OEYyVdbgOowXV2Ct_JN5irnRE";
 
