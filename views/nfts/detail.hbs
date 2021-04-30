@@ -1,25 +1,24 @@
 {{#section 'headMeta'}}
-	<title>Mike Hibbert - Lead developer - evermoredata.store</title>
+	<title>{{nft.name}} - evermoredata.store</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap">
-	<link rel="canonical" href="https://evermoredata.store/nft-detail/L07cTTg3jvseQnig7YS3ltv2C4X71me8dEwWG8gP5I8" data-react-helmet="true">
-	<meta name="google-site-verification" content="rdHghgE19nXaz19_OXvkv_MuEOSHl8lQPesWUmp21oU" data-react-helmet="true">
-	<meta name="description" content="This the guy that makes it all work over at Evermore - Created with Evermore" data-react-helmet="true">
-	<meta name="keywords" content="nft,nfts,Mike,Hibbert,-,Lead,developer,This,the,guy,that,makes,it,all,work,over,at,Evermore,-,Created,with,Evermore" data-react-helmet="true">
-	<meta property="og:url" content="https://evermoredata.store/#/nft-detail/L07cTTg3jvseQnig7YS3ltv2C4X71me8dEwWG8gP5I8" data-react-helmet="true">
-	<meta property="og:title" content="Mike Hibbert - Lead developer" data-react-helmet="true">
-	<meta name="og:description" content="This the guy that makes it all work over at Evermore - Created with Evermore" data-react-helmet="true">
-	<meta name="twitter:card" content="summary_large_image" data-react-helmet="true">
-	<meta name="twitter:title" content="Mike Hibbert - Lead developer" data-react-helmet="true">
-	<meta name="twitter:description" content="This the guy that makes it all work over at Evermore - Created with Evermore" data-react-helmet="true">
-	<meta name="twitter:site" content="https://evermoredata.store" data-react-helmet="true">
-	<meta property="og:image" content="https://arweave.net/c1mNDCo3Mh1PdimUr5OEYyVdbgOowXV2Ct_JN5irnRE" data-react-helmet="true">
-	<meta name="twitter:image" content="https://arweave.net/c1mNDCo3Mh1PdimUr5OEYyVdbgOowXV2Ct_JN5irnRE" data-react-helmet="true">
+	<link rel="canonical" href="https://www.evermoredata.store/nft-detail/{{nft.is}}" >
+	<meta name="google-site-verification" content="rdHghgE19nXaz19_OXvkv_MuEOSHl8lQPesWUmp21oU" >
+	<meta name="description" content="{{nft.description}}" >
+	<meta name="keywords" content="{{keywords}}" >
+	<meta property="og:url" content="https://www.evermoredata.store/nft-detail/{{nft.id}}" >
+	<meta property="og:title" content="{{nft.name}}" >
+	<meta name="og:description" content="{{nft.description}}" >
+	<meta name="twitter:card" content="summary_large_image" >
+	<meta name="twitter:title" content="{{nft.name}}" >
+	<meta name="twitter:description" content="{{nft.description}}" >
+	<meta name="twitter:site" content="https://www.evermoredata.store" >
+	<meta property="og:image" content="{{image_url}}" >
+	<meta name="twitter:image" content="{{image_url}}" >
 {{/section}}
 
 <body class="layout-admin aside-sticky header-sticky home-version-four" id="home-version-four">
 	
 	<div id="root">
-		{{nft.name}}
 		<div class="Toastify"></div>
 		<link rel="stylesheet" href="/css/style.css">
 		<link rel="stylesheet" href="/css/responsive.css">
@@ -81,11 +80,11 @@
 					<div class="col-12 col-sm-12 col-md-8 col-lg-8">
 						<div class="single_blog">
 							<div class="blog_banner">
-								<img src="https://arweave.net/L07cTTg3jvseQnig7YS3ltv2C4X71me8dEwWG8gP5I8" title="Mike Hibbert - Lead developer" class="img-fluid" style="object-fit: cover; height: auto; width: auto;">
+								{{{media_embed}}}
 							</div>
 							<div class="blog_content pt-20">
-								<h3>Mike Hibbert - Lead developer</h3>
-								<p>This the guy that makes it all work over at Evermore</p>
+								<h3>{{nft.name}}</h3>
+								<p>{{nft.description}}</p>
 								<div class="page_info pt-20">
 									<ul class="post_view_comment">
 										<li><i class="flaticon-calendar">Minted: <time datetime="1607013931221">Thu 3 Dec 2020 16:45:31</time></i>
@@ -104,9 +103,9 @@
 									<h3 class="title">Owner</h3>
 								</div>
 								<div class="tags-items">
-									<p>h-Bgr13OWUOkRGWrnMT0LuUKfJhRss5pfTdxHmNcXyw</p>
-									<input type="text" value="h-Bgr13OWUOkRGWrnMT0LuUKfJhRss5pfTdxHmNcXyw" style="display: none;">
-									<button type="button" class="btn btn-primary btn-soft mb-3 mt-20" data-toggle="modal" data-target="#exampleModalSm"><i class="fi fi-mollecules"></i>Copy to clipboad</button>
+									<p>{{owner}}</p>
+									{{!-- <input type="text" value="h-Bgr13OWUOkRGWrnMT0LuUKfJhRss5pfTdxHmNcXyw" style="display: none;">
+									<button type="button" class="btn btn-primary btn-soft mb-3 mt-20" data-toggle="modal" data-target="#exampleModalSm"><i class="fi fi-mollecules"></i>Copy to clipboad</button> --}}
 								</div>
 							</div>
 							<div class="follow_us widget_single pt-40">
@@ -115,8 +114,8 @@
 									<h3 class="title">Share</h3>
 								</div>
 								<div class="tags-items">
-									<a href="https://twitter.com/intent/tweet/?text=&amp;url=https%3A%2F%2Fevermoredata.store%2F%23%2Fnft-detail%2FL07cTTg3jvseQnig7YS3ltv2C4X71me8dEwWG8gP5I8" target="_blank" rel="noreferrer noopener" aria-label="Share on Twitter" title="Share on Twitter" class="sc-bwzfXH ewcqji">
-										<div class="sc-bdVaJa sc-bxivhb fWYWWZ">
+									<a href="https://twitter.com/intent/tweet/?url={{detail_url}}" target="_blank" rel="noreferrer noopener" aria-label="Share on Twitter" title="Share on Twitter" class="sc-bwzfXH ewcqji">
+										<div class="sc-bdVaJa sc-bxivhb twitter">
 											<div aria-hidden="true" class="sc-htpNat cgeQjm">
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 													<path d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z"></path>
@@ -124,7 +123,7 @@
 											</div>
 										</div>
 									</a>
-									<a href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fevermoredata.store%2F%23%2Fnft-detail%2FL07cTTg3jvseQnig7YS3ltv2C4X71me8dEwWG8gP5I8" target="_blank" rel="noreferrer noopener" aria-label="Share on Facebook" title="Share on Facebook" class="sc-bwzfXH ewcqji">
+									<a href="https://facebook.com/sharer/sharer.php?u={{detail_url}}" target="_blank" rel="noreferrer noopener" aria-label="Share on Facebook" title="Share on Facebook" class="sc-bwzfXH ewcqji">
 										<div class="sc-bdVaJa sc-ifAKCX ksIwnZ">
 											<div aria-hidden="true" class="sc-htpNat cgeQjm">
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -133,7 +132,7 @@
 											</div>
 										</div>
 									</a>
-									<a href="https://telegram.me/share/url?text=&amp;url=https%3A%2F%2Fevermoredata.store%2F%23%2Fnft-detail%2FL07cTTg3jvseQnig7YS3ltv2C4X71me8dEwWG8gP5I8" target="_blank" rel="noreferrer noopener" aria-label="Share on Telegram" title="Share on Telegram" class="sc-bwzfXH ewcqji">
+									<a href="https://telegram.me/share/url?url={{detail_url}}" target="_blank" rel="noreferrer noopener" aria-label="Share on Telegram" title="Share on Telegram" class="sc-bwzfXH ewcqji">
 										<div class="sc-bdVaJa sc-fjdhpX gTPjFA">
 											<div aria-hidden="true" class="sc-htpNat cgeQjm">
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -142,7 +141,7 @@
 											</div>
 										</div>
 									</a>
-									<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fevermoredata.store%2F%23%2Fnft-detail%2FL07cTTg3jvseQnig7YS3ltv2C4X71me8dEwWG8gP5I8" target="_blank" rel="noreferrer noopener" aria-label="Share on LinkedIn" title="Share on LinkedIn" class="sc-bwzfXH ewcqji">
+									<a href="https://www.linkedin.com/sharing/share-offsite/?url={{detail_url}}" target="_blank" rel="noreferrer noopener" aria-label="Share on LinkedIn" title="Share on LinkedIn" class="sc-bwzfXH ewcqji">
 										<div class="sc-bdVaJa sc-dnqmqq dWbQzG">
 											<div aria-hidden="true" class="sc-htpNat cgeQjm">
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -151,7 +150,7 @@
 											</div>
 										</div>
 									</a>
-									<a href="https://reddit.com/submit/?url=https%3A%2F%2Fevermoredata.store%2F%23%2Fnft-detail%2FL07cTTg3jvseQnig7YS3ltv2C4X71me8dEwWG8gP5I8&amp;title=" target="_blank" rel="noreferrer noopener" aria-label="Share on Reddit" title="Share on Reddit" class="sc-bwzfXH ewcqji">
+									<a href="https://reddit.com/submit/?url={{detail_url}}&title=" target="_blank" rel="noreferrer noopener" aria-label="Share on Reddit" title="Share on Reddit" class="sc-bwzfXH ewcqji">
 										<div class="sc-bdVaJa sc-iwsKbI buVPmO">
 											<div aria-hidden="true" class="sc-htpNat cgeQjm">
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -160,7 +159,7 @@
 											</div>
 										</div>
 									</a>
-									<a href="mailto:?subject=&amp;body=https%3A%2F%2Fevermoredata.store%2F%23%2Fnft-detail%2FL07cTTg3jvseQnig7YS3ltv2C4X71me8dEwWG8gP5I8" target="_self" rel="noreferrer noopener" aria-label="Share on E-mail" title="Share on E-mail" class="sc-bwzfXH ewcqji">
+									<a href="mailto:?subject=EvermoreNFTs&body={{detail_url}}" target="_self" rel="noreferrer noopener" aria-label="Share on E-mail" title="Share on E-mail" class="sc-bwzfXH ewcqji">
 										<div class="sc-bdVaJa sc-gzVnrw lgCdjb">
 											<div aria-hidden="true" class="sc-htpNat cgeQjm">
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -203,28 +202,14 @@
 					<div class="row">
 						<div class="col-md-6">
 							<p>Copyright@ Hibbert IT Solutions Limited
-								<time datetime="1619507306820">2021</time>
+								<time datetime="{{year}}">{{year}}</time>
 							</p>
-						</div>
-						<div class="col-md-6 text-right">
-							<ul>
-								<li><a href="privecy.html">Privacy</a>
-								</li>
-								<li><a href="team-page.html">Team</a>
-								</li>
-								<li><a href="index.html">Sitmap</a>
-								</li>
-							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 		</footer>
-		<section id="scroll-top" class="scroll-top">
-			<h2 class="disabled">&nbsp;</h2>
-			<div class="to-top pos-rtive"><a href="#"><i class="fa fa-arrow-up"></i></a>
-			</div>
-		</section>
+
 	</div>
 	<div id="modal-backdrop"></div>
 	<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-YSH82SBB2L"></script>
@@ -234,8 +219,7 @@
 	<script>
 		!function(e){function r(r){for(var n,l,i=r[0],f=r[1],a=r[2],p=0,s=[];p<i.length;p++)l=i[p],Object.prototype.hasOwnProperty.call(o,l)&&o[l]&&s.push(o[l][0]),o[l]=0;for(n in f)Object.prototype.hasOwnProperty.call(f,n)&&(e[n]=f[n]);for(c&&c(r);s.length;)s.shift()();return u.push.apply(u,a||[]),t()}function t(){for(var e,r=0;r<u.length;r++){for(var t=u[r],n=!0,i=1;i<t.length;i++){var f=t[i];0!==o[f]&&(n=!1)}n&&(u.splice(r--,1),e=l(l.s=t[0]))}return e}var n={},o={1:0},u=[];function l(r){if(n[r])return n[r].exports;var t=n[r]={i:r,l:!1,exports:{}};return e[r].call(t.exports,t,t.exports,l),t.l=!0,t.exports}l.m=e,l.c=n,l.d=function(e,r,t){l.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},l.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},l.t=function(e,r){if(1&r&&(e=l(e)),8&r)return e;if(4&r&&"object"==typeof e&&e&&e.__esModule)return e;var t=Object.create(null);if(l.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:e}),2&r&&"string"!=typeof e)for(var n in e)l.d(t,n,function(r){return e[r]}.bind(null,n));return t},l.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return l.d(r,"a",r),r},l.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},l.p="/";var i=this.webpackJsonpEvermoreWebclient=this.webpackJsonpEvermoreWebclient||[],f=i.push.bind(i);i.push=r,i=i.slice();for(var a=0;a<i.length;a++)r(i[a]);var c=f;t()}([])
 	</script>
-	<script src="/static/js/2.f315c9ce.chunk.js"></script>
-	<script src="/static/js/main.b933d729.chunk.js"></script>
+
 </body>
 
 </html>
