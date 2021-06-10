@@ -86,7 +86,7 @@ exports.detail = async function(req, res, next) {
 
         const detail_url = `https://www.evermoredata.store/ntfs/nft-detail/${node.id}`;
 
-        let image_url = "/image/c1mNDCo3Mh1PdimUr5OEYyVdbgOowXV2Ct_JN5irnRE";
+        let image_url = "/nfts/image/c1mNDCo3Mh1PdimUr5OEYyVdbgOowXV2Ct_JN5irnRE";
 
         if(node['Content-Type'].indexOf('image') != -1) {
           image_url = `/image/${node.id}`;
