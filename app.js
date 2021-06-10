@@ -50,6 +50,7 @@ if(os.hostname().indexOf('mike' > -1)) {
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
+  console.log('NOT FOUND' + req.originalUrl)
   next(createError(404));
 });
 
