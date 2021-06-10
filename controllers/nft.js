@@ -4,30 +4,30 @@ function getMediaElement(nft) {
   const contentType = nft['Content-Type'];
 
   if(nft['Content-Type'].indexOf('image') != -1) {
-    return `<img src="https://arweave.net/${nft.id}" title="${nft.name}" class="img-fluid" style="object-fit: cover; height: auto; width: auto;"></img>`;
+    return `<img src="/image/${nft.id}" title="${nft.name}" class="img-fluid" style="object-fit: cover; height: auto; width: auto;"></img>`;
     
   }
 
   if(nft['Content-Type'].indexOf('video') != -1) {
-    let poster = "https://arweave.net/c1mNDCo3Mh1PdimUr5OEYyVdbgOowXV2Ct_JN5irnRE";
+    let poster = "/image/c1mNDCo3Mh1PdimUr5OEYyVdbgOowXV2Ct_JN5irnRE";
         
     return `<div class="embed-responsive embed-responsive-16by9" style="object-fit: cover; height: auto; width: auto;" >
             <video preload="auto" controls poster="${poster}">
-                <source src="https://arweave.net/${nft.id}" type=${contentType} />
+                <source src="/image/${nft.id}" type=${contentType} />
             </video>
           </div>`;
   }
 
   if(nft['Content-Type'].indexOf('audio') != -1) {
     return `<div style="text-align: center;">
-            <img src="https://arweave.net/c1mNDCo3Mh1PdimUr5OEYyVdbgOowXV2Ct_JN5irnRE" title={initialStateTag.name} class="img-fluid" style="object-fit: cover; height: auto; width: auto;"></img>
+            <img src="/image/c1mNDCo3Mh1PdimUr5OEYyVdbgOowXV2Ct_JN5irnRE" title={initialStateTag.name} class="img-fluid" style="object-fit: cover; height: auto; width: auto;"></img>
             <audio preload="auto" controls autoplay >
-                <source src="https://arweave.net/${nft.id}" type=${contentType} />
+                <source src="/image/${nft.id}" type=${contentType} />
             </audio>
         </div>`;
   }
 
-  return `<img src="https://arweave.net/c1mNDCo3Mh1PdimUr5OEYyVdbgOowXV2Ct_JN5irnRE" title="${nft.name}" class="img-fluid" style="object-fit: cover; height: auto; width: auto;"></img>`
+  return `<img src="/image/c1mNDCo3Mh1PdimUr5OEYyVdbgOowXV2Ct_JN5irnRE" title="${nft.name}" class="img-fluid" style="object-fit: cover; height: auto; width: auto;"></img>`
 }
 
 exports.detail = async function(req, res, next) {
@@ -86,10 +86,10 @@ exports.detail = async function(req, res, next) {
 
         const detail_url = `https://www.evermoredata.store/ntfs/nft-detail/${node.id}`;
 
-        let image_url = "https://arweave.net/c1mNDCo3Mh1PdimUr5OEYyVdbgOowXV2Ct_JN5irnRE";
+        let image_url = "/image/c1mNDCo3Mh1PdimUr5OEYyVdbgOowXV2Ct_JN5irnRE";
 
         if(node['Content-Type'].indexOf('image') != -1) {
-          image_url = `https://arweave.net/${node.id}`;
+          image_url = `/image/${node.id}`;
         }
 
         const initalState = node['Init-State'];

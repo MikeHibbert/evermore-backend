@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 let passport = require('passport');
 let session = require('express-session');
+var proxy = require('express-http-proxy');
 var nftsRouter = require('./routes/index');
 let flash = require('connect-flash');
 
@@ -34,6 +35,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/image', proxy('arweave.net'));
 
 app.use('/', nftsRouter);
 
