@@ -39,7 +39,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 console.log(os.hostname())
 
-if(os.hostname().indexOf('local' > -1)) {
+if(os.hostname().indexOf('mike' > -1)) {
   app.use('/nfts/image', proxy('arweave.net'));
   app.use('/nfts', nftsRouter);
 } else {
