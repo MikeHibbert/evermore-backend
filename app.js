@@ -1,3 +1,4 @@
+var os = require('os');
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -35,9 +36,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/image', proxy('arweave.net'));
 
-app.use('/', nftsRouter);
+if(os.hostname().indexOf('local' > -1)) {
+  app.use('/nfts/image', proxy('arweave.net'));
+  app.use('/nfts', nftsRouter);
+} else {
+  app.use('/image', proxy('arweave.net'));
+  app.use('/', nftsRouter);
+}
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
