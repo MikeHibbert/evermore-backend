@@ -37,6 +37,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+console.log(os.hostname())
+
 if(os.hostname().indexOf('local' > -1)) {
   app.use('/nfts/image', proxy('arweave.net'));
   app.use('/nfts', nftsRouter);
